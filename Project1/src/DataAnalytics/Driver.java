@@ -7,7 +7,7 @@ import java.io.*;
 
 public class Driver {
 	
-	private static void inItAndShowGUI() {
+	/*private static void inItAndShowGUI() {
 		
 		//Generate 2 sets of random DataPoints
 		//Training Data
@@ -45,13 +45,39 @@ public class Driver {
 		myFrame.pack();
 		myFrame.setVisible(true);
 		}
+		*/
 	
 	public static void main(String[] args) {
-        SwingUtilities.invokeLater(
+		
+        /*SwingUtilities.invokeLater(
                 new Runnable() { 
               	  public void run() { 
               		  inItAndShowGUI(); } }
-              );
+              );*/
+		
+		//User imput for k:
+		Scanner kScan = new Scanner(System.in);  // Create a Scanner object
+	    System.out.println("Enter k: ");
+	    int k = kScan.nextInt();
+	    
+		//New KNNPredictor
+		KNNPredictor kp = new KNNPredictor(k);
+		System.out.println(kp.getK());
+		
+		//Load Data
+		ArrayList<DataPoint> arr = kp.readData("titanic.csv");
+		
+		//New Point
+		DataPoint dp = new DataPoint(1,30,"Survived",true);
+		
+		//Print test
+		System.out.println("\n"+"testing test(): "+kp.test(dp));
+		
+		//print get accuracy
+		System.out.println("Accuracy: "+kp.getAccuracy(arr));
+		
+		//print get precision
+		System.out.println("Precision: "+kp.getPrecision(arr));
 	}
 }
 

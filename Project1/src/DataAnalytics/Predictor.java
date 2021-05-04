@@ -9,4 +9,5 @@ public abstract class Predictor {
 	abstract String test(DataPoint data);
 	abstract Double getAccuracy(ArrayList<DataPoint> data);
 	abstract Double getPrecision(ArrayList<DataPoint> data);
+
 }

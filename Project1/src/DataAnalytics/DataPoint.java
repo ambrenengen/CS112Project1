@@ -4,9 +4,9 @@ public class DataPoint {
 	
 	//Instance Variables:
 	//Should the doubles be reference types?
-	double f1;
-	double f2;
-	String label;
+	double f1; //first var
+	double f2; //second var
+	String label; //survived or not
 	boolean isTest;//Is this a test data point or not
 
 	//4 Arg Constructor
@@ -17,6 +17,7 @@ public class DataPoint {
 		this.isTest = tParam;
 		//Do we need validation? (test data == null)
 	}
+	
 	//no-arg default constructor
 	public DataPoint() {
 		this.f1 = 0;
@@ -51,6 +52,11 @@ public class DataPoint {
 	}
 	public void setIsTest(boolean tParam) {
 		this.isTest = tParam;
+	}
+	
+	//toString method
+	public String toString() {
+		return "label = "+this.label;
 	}
 	
 	
