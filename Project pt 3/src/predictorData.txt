@@ -1,0 +1,12 @@
+1.6,5.5,"Green",true
+3.4,7.8,"Green",true
+5.7,8.2,"Green",true
+6.6,4.2,"Blue",true
+7.2,3.7, "Blue",true
+9.9,1.5,"Blue",true
+8.2,1.2,null,false
+7.7,7.8,null,false
+9.0,1.0,null,false
+5.7,3.2,null,false
+2.2,3.7,null,false
+3.9,5.0,null,false
